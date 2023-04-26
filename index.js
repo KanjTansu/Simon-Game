@@ -43,7 +43,9 @@ function checkAnswer(currentLevel) {
 }
 
 $(document).on("keydown",function () {
-    nextSequence();
+    if(gamePattern.length === 0){
+        nextSequence();
+    }
 })
 
 function colorSound(color){
